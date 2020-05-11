@@ -54,7 +54,7 @@ The name should follow this pattern: `face<index> -s<ms> [<feature>] [noR]`
 
 - `index`: 0-5. Spark AR supports detection of up to 5 faces.
 - `ms`: Smooth milliseconds, the minimum valid value is `0`.
-- `feature`: [Click here](#FacialFeatures) to look up supported feature and keyword.
+- `feature`: [Click here](#Facial Feature Keywords) to look up supported feature and keyword.
 - `noR`: Follow position only, without rotation.
 
 There are some naming example:
