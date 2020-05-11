@@ -30,6 +30,6 @@
   "homepage": "https://github.com/pofulu/sparkar-smoother#readme",
   "license": "MIT",
   "dependencies": {
-    "sparkar-invoke": "0.2.4^"
+    "sparkar-invoke": "0.2.4"
   }
 }
