@@ -54,7 +54,7 @@ The name should follow this pattern: `face<index> -s<ms> [<feature>] [noR]`
 
 - `index`: 0-5. Spark AR supports detection of up to 5 faces.
 - `ms`: Smooth milliseconds, the minimum valid value is `0`.
-- `feature`: [Click here](#Facial Feature Keywords) to look up supported feature and keyword.
+- `feature`:  [Click here](#facial-feature-keywords) to look up supported feature and keyword.
 - `noR`: Follow position only, without rotation.
 
 There are some naming example:
@@ -96,4 +96,4 @@ There are some naming example:
 
 - You can change all of these keywords in the `CONFIG` field of source code.
 - By default if the face of specific index in not detected, the corresponding scene object will be hidden. You can set it in the `CONFIG` field of source code.
-- You can set up `Smoother.enable ` in your script to toggle smooth effect.
+- You can set up `Smoother.enable` in your script to toggle smooth effect.
