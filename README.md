@@ -88,6 +88,8 @@ There are some naming example:
 | `mouth`     | Mouth                    |
 | `mouthlipU` | Mouth Upperlip           |
 | `mouthlipD` | Mouth Lowerlip           |
+| `mouthLC`   | Mouth Left Corner        |
+| `mouthRC`   | Mouth Right Corner       |
 | `foreheadT` | Forehead top             |
 
 

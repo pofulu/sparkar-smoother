@@ -17,6 +17,8 @@ const EYELID_RIGHT_UPPER_KEYWORD = 'eyelidRU';
 const EYE_LEFT_OUTSIDE_CORNER_KEYWORD = 'eyeLOC';
 const EYE_RIGHT_OUTSIDE_CORNER_KEYWORD = 'eyeROC';
 const FOREHEAD_TOP_KEYWORD = 'foreheadT';
+const MOUTH_LEFT_CORNER_KEYWORD = 'mouthLC';
+const MOUTH_RIGHT_CORNER_KEYWORD = 'mouthRC';
 
 function onTracked(targetRoot) {
     targetRoot.hidden = false;
@@ -40,17 +42,22 @@ const targets = Scene.root.findByPath(`**/*${FACE_KEYWORD}*${SMOOTH_KEYWORD}*`);
 let isEnable = false;
 
 const FacialFeatures = {
+    leftUpperEyelidCenter: 'leftUpperEyelidCenter',
     leftEyebrowTop: 'leftEyebrowTop',
-    rightEyebrowTop: 'rightEyebrowTop',
     leftEyeCenter: 'leftEyeCenter',
+    leftOutsideCorner: 'leftEyeOutsideCorner',
+
+    rightUpperEyelidCenter: 'rightUpperEyelidCenter',
+    rightEyebrowTop: 'rightEyebrowTop',
     rightEyeCenter: 'rightEyeCenter',
+    rightOutsideCorner: 'rightEyeOutsideCorner',
+
     mouthLowerLipCenter: 'mouthLowerLipCenter',
     mouthUpperLipCenter: 'mouthUpperLipCenter',
     mouthCenter: 'mouthCenter',
-    leftUpperEyelidCenter: 'leftUpperEyelidCenter',
-    rightUpperEyelidCenter: 'rightUpperEyelidCenter',
-    leftOutsideCorner: 'leftOutsideCorner',
-    rightOutsideCorner: 'rightOutsideCorner',
+    mouthLeftCorner: 'mouthLeftCorner',
+    mouthRightCorner: 'mouthRightCorner',
+
     foreheadTop: 'foreheadTop',
 };
 
@@ -61,14 +68,19 @@ function parseFacialFeatureName(name) {
     else if (name.indexOf(EYE_RIGHT_KEYWORD) !== -1) return FacialFeatures.rightEyeCenter;
     else if (name.indexOf(EYEBOW_LEFT_KEYWORD) !== -1) return FacialFeatures.leftEyebrowTop;
     else if (name.indexOf(EYEBOW_RIGHT_KEYWORD) !== -1) return FacialFeatures.rightEyebrowTop;
+
+    else if (name.indexOf(MOUTH_RIGHT_CORNER_KEYWORD) !== -1) return FacialFeatures.mouthRightCorner;
+    else if (name.indexOf(MOUTH_LEFT_CORNER_KEYWORD) !== -1) return FacialFeatures.mouthLeftCorner;
     else if (name.indexOf(MOUTH_UPPERLIP_KEYWORD) !== -1) return FacialFeatures.mouthUpperLipCenter;
     else if (name.indexOf(MOUTH_LOWERLIP_KEYWORD) !== -1) return FacialFeatures.mouthLowerLipCenter;
     else if (name.indexOf(MOUTH_KEYWORD) !== -1) return FacialFeatures.mouthCenter;
+
     else if (name.indexOf(EYELID_LEFT_UPPER_KEYWORD) !== -1) return FacialFeatures.leftUpperEyelidCenter;
     else if (name.indexOf(EYELID_RIGHT_UPPER_KEYWORD) !== -1) return FacialFeatures.rightUpperEyelidCenter;
     else if (name.indexOf(EYE_LEFT_OUTSIDE_CORNER_KEYWORD) !== -1) return FacialFeatures.leftOutsideCorner;
     else if (name.indexOf(EYE_RIGHT_OUTSIDE_CORNER_KEYWORD) !== -1) return FacialFeatures.rightOutsideCorner;
     else if (name.indexOf(FOREHEAD_TOP_KEYWORD) !== -1) return FacialFeatures.foreheadTop;
+
     else return undefined;
 }
 
@@ -123,6 +135,13 @@ function getTrackerPosition(tracker, feature) {
                 tracker.cameraTransform.applyTo(tracker.mouth.center).z,
             );
 
+        case FacialFeatures.mouthLowerLipCenter:
+            return Reactive.pack3(
+                tracker.cameraTransform.applyTo(tracker.mouth.center).x,
+                tracker.cameraTransform.applyTo(tracker.mouth.center).y,
+                tracker.cameraTransform.applyTo(tracker.mouth.center).z,
+            );
+
         case FacialFeatures.leftUpperEyelidCenter:
             return Reactive.pack3(
                 tracker.cameraTransform.applyTo(tracker.leftEye.upperEyelidCenter).x,
@@ -156,6 +175,20 @@ function getTrackerPosition(tracker, feature) {
                 tracker.cameraTransform.applyTo(tracker.forehead.top).x,
                 tracker.cameraTransform.applyTo(tracker.forehead.top).y,
                 tracker.cameraTransform.applyTo(tracker.forehead.top).z,
+            );
+
+        case FacialFeatures.mouthLeftCorner:
+            return Reactive.pack3(
+                tracker.cameraTransform.applyTo(tracker.mouth.leftCorner).x,
+                tracker.cameraTransform.applyTo(tracker.mouth.leftCorner).y,
+                tracker.cameraTransform.applyTo(tracker.mouth.leftCorner).z,
+            );
+
+        case FacialFeatures.mouthRightCorner:
+            return Reactive.pack3(
+                tracker.cameraTransform.applyTo(tracker.mouth.rightCorner).x,
+                tracker.cameraTransform.applyTo(tracker.mouth.rightCorner).y,
+                tracker.cameraTransform.applyTo(tracker.mouth.rightCorner).z,
             );
 
         default:
