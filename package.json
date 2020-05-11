@@ -1,0 +1,35 @@
+{
+  "name": "sparkar-smoother",
+  "version": "0.0.2",
+  "description": "Make object smoothly follow facial features with object's naming.",
+  "main": "Smoother.js",
+  "author": "Pofu Lu",
+  "keywords": [
+    "sparkar",
+    "face",
+    "head",
+    "tracker",
+    "exponential",
+    "smooth",
+    "facial",
+    "pofu"
+  ],
+  "files": [
+    "/Smoother.js"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pofulu/sparkar-smoother.git"
+  },
+  "bugs": {
+    "url": "https://github.com/pofulu/sparkar-smoother/issues"
+  },
+  "homepage": "https://github.com/pofulu/sparkar-smoother#readme",
+  "license": "MIT",
+  "dependencies": {
+    "sparkar-invoke": "0.2.4^"
+  }
+}
