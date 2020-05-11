@@ -1,6 +1,6 @@
 {
   "name": "sparkar-smoother",
-  "version": "0.0.2",
+  "version": "0.1.0",
   "description": "Make object smoothly follow facial features with object's naming.",
   "main": "Smoother.js",
   "author": "Pofu Lu",
