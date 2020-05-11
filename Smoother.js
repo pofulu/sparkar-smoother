@@ -28,7 +28,7 @@ function onLostTracked(targetRoot) {
 
 //–––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
 
-const onSetSignalThen = require('spakrar-invoke').onSetSignalThen;
+const onSetSignalThen = require('sparkar-invoke').onSetSignalThen;
 const Scene = require('Scene');
 const FaceTracking = require('FaceTracking');
 const Reactive = require('Reactive');
