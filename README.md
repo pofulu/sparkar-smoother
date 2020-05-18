@@ -99,3 +99,8 @@ There are some naming example:
 - You can change all of these keywords in the `CONFIG` field of source code.
 - By default if the face of specific index in not detected, the corresponding scene object will be hidden. You can set it in the `CONFIG` field of source code.
 - You can set up `Smoother.enable` in your script to toggle smooth effect.
+
+## Donations
+If this is useful for you, please consider a donation🙏🏼. One-time donations can be made with PayPal.
+
+[![](https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=HW99ESSALJZ36)
