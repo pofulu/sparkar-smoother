@@ -50,7 +50,7 @@
 
 This tool make object follow head by **naming**, so you don't need to add any Patch or write any code. All you need to do is naming your scene object.
 
-The name should follow this pattern: `face<index> -s<ms> [<feature>] [noR]`
+The name should follow this pattern: `face<index> -s<ms> [<feature>] [-noR]`
 
 - `index`: 0-5. Spark AR supports detection of up to 5 faces.
 - `ms`: Smooth milliseconds, the minimum valid value is `0`.
@@ -64,7 +64,7 @@ There are some naming example:
 | `face0 -s500`      | Follow the face of index `0` with exponential smooth `500` millisecond. |
 | `face1 -s300`      | Follow the face of index `1` with exponential smooth `300` millisecond. |
 | `face2 -s0`        | Follow the face of index `1` without any smooth exponential smooth. |
-| `face3 -s0 noR`    | Follow the face of index `3` position only, excluding rotation. |
+| `face3 -s0 -noR`   | Follow the face of index `3` position only, excluding rotation. |
 | `face3 -s50 eyeL`  | Follow the **left eye** of face `3` with exponential smooth `50` millisecond. |
 | `face4 -s50 eyeR`  | Follow the **right eye** of face `4` with exponential smooth `50` millisecond. |
 | `face4 -s20 mouth` | Follow the **mouth** of face `4` with exponential smooth `50` millisecond. |
