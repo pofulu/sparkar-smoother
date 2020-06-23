@@ -88,107 +88,107 @@ function getTrackerPosition(tracker, feature) {
     switch (feature) {
         case FacialFeatures.leftEyebrowTop:
             return Reactive.pack3(
-                tracker.cameraTransform.applyTo(tracker.leftEyebrow.top).x,
-                tracker.cameraTransform.applyTo(tracker.leftEyebrow.top).y,
-                tracker.cameraTransform.applyTo(tracker.leftEyebrow.top).z,
+                tracker.cameraTransform.applyToPoint(tracker.leftEyebrow.top).x,
+                tracker.cameraTransform.applyToPoint(tracker.leftEyebrow.top).y,
+                tracker.cameraTransform.applyToPoint(tracker.leftEyebrow.top).z,
             );
 
         case FacialFeatures.rightEyebrowTop:
             return Reactive.pack3(
-                tracker.cameraTransform.applyTo(tracker.rightEyebrow.top).x,
-                tracker.cameraTransform.applyTo(tracker.rightEyebrow.top).y,
-                tracker.cameraTransform.applyTo(tracker.rightEyebrow.top).z,
+                tracker.cameraTransform.applyToPoint(tracker.rightEyebrow.top).x,
+                tracker.cameraTransform.applyToPoint(tracker.rightEyebrow.top).y,
+                tracker.cameraTransform.applyToPoint(tracker.rightEyebrow.top).z,
             );
 
         case FacialFeatures.leftEyeCenter:
             return Reactive.pack3(
-                tracker.cameraTransform.applyTo(tracker.leftEye.center).x,
-                tracker.cameraTransform.applyTo(tracker.leftEye.center).y,
-                tracker.cameraTransform.applyTo(tracker.leftEye.center).z,
+                tracker.cameraTransform.applyToPoint(tracker.leftEye.center).x,
+                tracker.cameraTransform.applyToPoint(tracker.leftEye.center).y,
+                tracker.cameraTransform.applyToPoint(tracker.leftEye.center).z,
             );
 
         case FacialFeatures.rightEyeCenter:
             return Reactive.pack3(
-                tracker.cameraTransform.applyTo(tracker.rightEye.center).x,
-                tracker.cameraTransform.applyTo(tracker.rightEye.center).y,
-                tracker.cameraTransform.applyTo(tracker.rightEye.center).z,
+                tracker.cameraTransform.applyToPoint(tracker.rightEye.center).x,
+                tracker.cameraTransform.applyToPoint(tracker.rightEye.center).y,
+                tracker.cameraTransform.applyToPoint(tracker.rightEye.center).z,
             );
 
         case FacialFeatures.mouthLowerLipCenter:
             return Reactive.pack3(
-                tracker.cameraTransform.applyTo(tracker.mouth.lowerLipCenter).x,
-                tracker.cameraTransform.applyTo(tracker.mouth.lowerLipCenter).y,
-                tracker.cameraTransform.applyTo(tracker.mouth.lowerLipCenter).z,
+                tracker.cameraTransform.applyToPoint(tracker.mouth.lowerLipCenter).x,
+                tracker.cameraTransform.applyToPoint(tracker.mouth.lowerLipCenter).y,
+                tracker.cameraTransform.applyToPoint(tracker.mouth.lowerLipCenter).z,
             );
 
         case FacialFeatures.mouthUpperLipCenter:
             return Reactive.pack3(
-                tracker.cameraTransform.applyTo(tracker.mouth.upperLipCenter).x,
-                tracker.cameraTransform.applyTo(tracker.mouth.upperLipCenter).y,
-                tracker.cameraTransform.applyTo(tracker.mouth.upperLipCenter).z,
+                tracker.cameraTransform.applyToPoint(tracker.mouth.upperLipCenter).x,
+                tracker.cameraTransform.applyToPoint(tracker.mouth.upperLipCenter).y,
+                tracker.cameraTransform.applyToPoint(tracker.mouth.upperLipCenter).z,
             );
 
         case FacialFeatures.mouthCenter:
             return Reactive.pack3(
-                tracker.cameraTransform.applyTo(tracker.mouth.center).x,
-                tracker.cameraTransform.applyTo(tracker.mouth.center).y,
-                tracker.cameraTransform.applyTo(tracker.mouth.center).z,
+                tracker.cameraTransform.applyToPoint(tracker.mouth.center).x,
+                tracker.cameraTransform.applyToPoint(tracker.mouth.center).y,
+                tracker.cameraTransform.applyToPoint(tracker.mouth.center).z,
             );
 
         case FacialFeatures.mouthLowerLipCenter:
             return Reactive.pack3(
-                tracker.cameraTransform.applyTo(tracker.mouth.center).x,
-                tracker.cameraTransform.applyTo(tracker.mouth.center).y,
-                tracker.cameraTransform.applyTo(tracker.mouth.center).z,
+                tracker.cameraTransform.applyToPoint(tracker.mouth.center).x,
+                tracker.cameraTransform.applyToPoint(tracker.mouth.center).y,
+                tracker.cameraTransform.applyToPoint(tracker.mouth.center).z,
             );
 
         case FacialFeatures.leftUpperEyelidCenter:
             return Reactive.pack3(
-                tracker.cameraTransform.applyTo(tracker.leftEye.upperEyelidCenter).x,
-                tracker.cameraTransform.applyTo(tracker.leftEye.upperEyelidCenter).y,
-                tracker.cameraTransform.applyTo(tracker.leftEye.upperEyelidCenter).z,
+                tracker.cameraTransform.applyToPoint(tracker.leftEye.upperEyelidCenter).x,
+                tracker.cameraTransform.applyToPoint(tracker.leftEye.upperEyelidCenter).y,
+                tracker.cameraTransform.applyToPoint(tracker.leftEye.upperEyelidCenter).z,
             );
 
         case FacialFeatures.rightUpperEyelidCenter:
             return Reactive.pack3(
-                tracker.cameraTransform.applyTo(tracker.rightEye.upperEyelidCenter).x,
-                tracker.cameraTransform.applyTo(tracker.rightEye.upperEyelidCenter).y,
-                tracker.cameraTransform.applyTo(tracker.rightEye.upperEyelidCenter).z,
+                tracker.cameraTransform.applyToPoint(tracker.rightEye.upperEyelidCenter).x,
+                tracker.cameraTransform.applyToPoint(tracker.rightEye.upperEyelidCenter).y,
+                tracker.cameraTransform.applyToPoint(tracker.rightEye.upperEyelidCenter).z,
             );
 
         case FacialFeatures.leftOutsideCorner:
             return Reactive.pack3(
-                tracker.cameraTransform.applyTo(tracker.leftEye.outsideCorner).x,
-                tracker.cameraTransform.applyTo(tracker.leftEye.outsideCorner).y,
-                tracker.cameraTransform.applyTo(tracker.leftEye.outsideCorner).z,
+                tracker.cameraTransform.applyToPoint(tracker.leftEye.outsideCorner).x,
+                tracker.cameraTransform.applyToPoint(tracker.leftEye.outsideCorner).y,
+                tracker.cameraTransform.applyToPoint(tracker.leftEye.outsideCorner).z,
             );
 
         case FacialFeatures.rightOutsideCorner:
             return Reactive.pack3(
-                tracker.cameraTransform.applyTo(tracker.rightEye.outsideCorner).x,
-                tracker.cameraTransform.applyTo(tracker.rightEye.outsideCorner).y,
-                tracker.cameraTransform.applyTo(tracker.rightEye.outsideCorner).z,
+                tracker.cameraTransform.applyToPoint(tracker.rightEye.outsideCorner).x,
+                tracker.cameraTransform.applyToPoint(tracker.rightEye.outsideCorner).y,
+                tracker.cameraTransform.applyToPoint(tracker.rightEye.outsideCorner).z,
             );
 
         case FacialFeatures.foreheadTop:
             return Reactive.pack3(
-                tracker.cameraTransform.applyTo(tracker.forehead.top).x,
-                tracker.cameraTransform.applyTo(tracker.forehead.top).y,
-                tracker.cameraTransform.applyTo(tracker.forehead.top).z,
+                tracker.cameraTransform.applyToPoint(tracker.forehead.top).x,
+                tracker.cameraTransform.applyToPoint(tracker.forehead.top).y,
+                tracker.cameraTransform.applyToPoint(tracker.forehead.top).z,
             );
 
         case FacialFeatures.mouthLeftCorner:
             return Reactive.pack3(
-                tracker.cameraTransform.applyTo(tracker.mouth.leftCorner).x,
-                tracker.cameraTransform.applyTo(tracker.mouth.leftCorner).y,
-                tracker.cameraTransform.applyTo(tracker.mouth.leftCorner).z,
+                tracker.cameraTransform.applyToPoint(tracker.mouth.leftCorner).x,
+                tracker.cameraTransform.applyToPoint(tracker.mouth.leftCorner).y,
+                tracker.cameraTransform.applyToPoint(tracker.mouth.leftCorner).z,
             );
 
         case FacialFeatures.mouthRightCorner:
             return Reactive.pack3(
-                tracker.cameraTransform.applyTo(tracker.mouth.rightCorner).x,
-                tracker.cameraTransform.applyTo(tracker.mouth.rightCorner).y,
-                tracker.cameraTransform.applyTo(tracker.mouth.rightCorner).z,
+                tracker.cameraTransform.applyToPoint(tracker.mouth.rightCorner).x,
+                tracker.cameraTransform.applyToPoint(tracker.mouth.rightCorner).y,
+                tracker.cameraTransform.applyToPoint(tracker.mouth.rightCorner).z,
             );
 
         default:
